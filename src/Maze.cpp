@@ -17,13 +17,17 @@ nana::form* fmptr;
 int** path;
 int nSelected;
 const int ds[4][2]={{0,-1},{-1,0},{0,1},{1,0}};
+bool started=false;
 
 Maze(int rows,int cols,int src[2],int dst[2]){
+
+    this->src=src;
+    this->dst=dst;
+
+
     this->sqSize=50;
     this->rows=rows;
     this->cols=cols;
-    this->src=src;
-    this->dst=dst;
     this->board = new int*[rows];  
     for (int i = 0; i < rows; ++i) {
         board[i] = new int[cols];  
@@ -34,18 +38,12 @@ Maze(int rows,int cols,int src[2],int dst[2]){
     }
     this->nSelected=0;
 
-    if(!isValidSq(src[0],src[1]) || !isValidSq(dst[0],dst[1]))
-    {
-    cerr<<"Invalid src or dst"<<endl;
-    exit(0);
-    }
-
-
 
         
     srand(time(0));
     int n1=rand()%(rows*cols/2);
     initialize(n1);
+    
 }
 
 bool isValidSq(int row,int col){
@@ -82,14 +80,38 @@ void update() {
                 }
             }
 
+            if(started){
             graph.rectangle(nana::rectangle{src[1] * sqSize, src[0] * sqSize, sqSize, sqSize}, true, colors::green); // Source (green)
             graph.rectangle(nana::rectangle{dst[1] * sqSize, dst[0] * sqSize, sqSize, sqSize}, true, colors::yellow); // Destination (yellow)
+            }
         });
 
         dw.update();
     }
 
-    bool on_form_click(const nana::arg_click& arg) {
+void startGame(int src[2],int dst[2]){
+    this->src=src;
+    this->dst=dst;
+
+    if(!isValidSq(src[0],src[1]) || !isValidSq(dst[0],dst[1]))
+    {
+    cerr<<"Invalid src or dst"<<endl;
+    exit(0);
+    }
+    started=true;
+
+    board[src[0]][src[1]]=2;
+    path[nSelected][0]=src[0];
+    path[nSelected][1]=src[1];
+    nSelected++;
+
+    fmptr->events().click([this](const nana::arg_click& arg) {
+    this->on_form_click(arg);
+});
+    
+}
+
+bool on_form_click(const nana::arg_click& arg) {
     if (arg.window_handle != *fmptr) 
     return false;
 
@@ -154,27 +176,20 @@ void initialize(int blocks){
     for(int x=0;x<blocks;x++){
         int i=rand()%rows;
         int j=rand()%cols;
-        cout<<"i="<<i<<"j="<<j<<endl;
         board[i][j]=0;
     }
    
-    board[src[0]][src[1]]=2;
-    path[nSelected][0]=src[0];
-    path[nSelected][1]=src[1];
-    nSelected++;
-
+    
 
     using namespace nana;
     appearance ap;
     ap.sizable=false;
     fmptr = new form(API::make_center(sqSize * cols, sqSize * rows),ap);
-    fmptr->events().click([this](const nana::arg_click& arg) {
-    this->on_form_click(arg);
-});
     update(); 
     fmptr->show();
+    
+    startGame(src,dst);
     ::nana::exec();
-
 }
     
 };
