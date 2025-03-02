@@ -1,0 +1,6 @@
+/home/samsung/DSA PROJECT/build/CMakeFiles/MyNanaApp.dir
+/home/samsung/DSA PROJECT/build/CMakeFiles/edit_cache.dir
+/home/samsung/DSA PROJECT/build/CMakeFiles/rebuild_cache.dir
+/home/samsung/DSA PROJECT/build/third_party/nana/CMakeFiles/nana.dir
+/home/samsung/DSA PROJECT/build/third_party/nana/CMakeFiles/edit_cache.dir
+/home/samsung/DSA PROJECT/build/third_party/nana/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,288 @@
+Performing C++ SOURCE FILE Test CXXBuiltIn_FS_BuiltIn failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b0b88/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b0b88.dir/build.make CMakeFiles/cmTC_b0b88.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b0b88.dir/src.cxx.o
+/usr/bin/c++ -DCXXBuiltIn_FS_BuiltIn  -std=gnu++11 -o CMakeFiles/cmTC_b0b88.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_b0b88.dir/build.make:78: CMakeFiles/cmTC_b0b88.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b0b88/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXXBuiltIn_FS_stdcppfs failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ae0b1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ae0b1.dir/build.make CMakeFiles/cmTC_ae0b1.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ae0b1.dir/src.cxx.o
+/usr/bin/c++ -DCXXBuiltIn_FS_stdcppfs  -std=gnu++11 -o CMakeFiles/cmTC_ae0b1.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_ae0b1.dir/build.make:78: CMakeFiles/cmTC_ae0b1.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ae0b1/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXXBuiltIn_FS_cppfs failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7f4dc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7f4dc.dir/build.make CMakeFiles/cmTC_7f4dc.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7f4dc.dir/src.cxx.o
+/usr/bin/c++ -DCXXBuiltIn_FS_cppfs  -std=gnu++11 -o CMakeFiles/cmTC_7f4dc.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_7f4dc.dir/build.make:78: CMakeFiles/cmTC_7f4dc.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7f4dc/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXX_std__cpp17_FS_BuiltIn failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_15b12/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_15b12.dir/build.make CMakeFiles/cmTC_15b12.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_15b12.dir/src.cxx.o
+/usr/bin/c++ -DCXX_std__cpp17_FS_BuiltIn  -std=c++17 -std=gnu++11 -o CMakeFiles/cmTC_15b12.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_15b12.dir/build.make:78: CMakeFiles/cmTC_15b12.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_15b12/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXX_std__cpp17_FS_stdcppfs failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3b0d0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3b0d0.dir/build.make CMakeFiles/cmTC_3b0d0.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3b0d0.dir/src.cxx.o
+/usr/bin/c++ -DCXX_std__cpp17_FS_stdcppfs  -std=c++17 -std=gnu++11 -o CMakeFiles/cmTC_3b0d0.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_3b0d0.dir/build.make:78: CMakeFiles/cmTC_3b0d0.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3b0d0/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXX_std__cpp17_FS_cppfs failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5bc72/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5bc72.dir/build.make CMakeFiles/cmTC_5bc72.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5bc72.dir/src.cxx.o
+/usr/bin/c++ -DCXX_std__cpp17_FS_cppfs  -std=c++17 -std=gnu++11 -o CMakeFiles/cmTC_5bc72.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_5bc72.dir/build.make:78: CMakeFiles/cmTC_5bc72.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5bc72/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXX_std_cpp17_FS_BuiltIn failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_de062/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_de062.dir/build.make CMakeFiles/cmTC_de062.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_de062.dir/src.cxx.o
+/usr/bin/c++ -DCXX_std_cpp17_FS_BuiltIn  /std:c++17 -std=gnu++11 -o CMakeFiles/cmTC_de062.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_de062.dir/build.make:78: CMakeFiles/cmTC_de062.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_de062/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXX_std_cpp17_FS_stdcppfs failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7ac31/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7ac31.dir/build.make CMakeFiles/cmTC_7ac31.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7ac31.dir/src.cxx.o
+/usr/bin/c++ -DCXX_std_cpp17_FS_stdcppfs  /std:c++17 -std=gnu++11 -o CMakeFiles/cmTC_7ac31.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_7ac31.dir/build.make:78: CMakeFiles/cmTC_7ac31.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7ac31/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }
+Performing C++ SOURCE FILE Test CXX_std_cpp17_FS_cppfs failed with the following output:
+Change Dir: /home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7738c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7738c.dir/build.make CMakeFiles/cmTC_7738c.dir/build
+gmake[1]: Entering directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7738c.dir/src.cxx.o
+/usr/bin/c++ -DCXX_std_cpp17_FS_cppfs  /std:c++17 -std=gnu++11 -o CMakeFiles/cmTC_7738c.dir/src.cxx.o -c "/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx"
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:4:22: error: ‘std::filesystem’ has not been declared
+    4 |                 std::filesystem::path p{"       mp/"};
+      |                      ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:28: error: ‘std::filesystem’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                            ^~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:82: error: ‘make_error_code’ is not a member of ‘std’
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                  ^~~~~~~~~~~~~~~
+/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp/src.cxx:5:103: error: ‘std::errc’ has not been declared
+    5 |                 throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+      |                                                                                                       ^~~~
+gmake[1]: *** [CMakeFiles/cmTC_7738c.dir/build.make:78: CMakeFiles/cmTC_7738c.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/samsung/DSA PROJECT/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7738c/fast] Error 2
+
+
+Source file was:
+#include <filesystem>
+            int main()
+            {
+                std::filesystem::path p{"	mp/"};
+                throw std::filesystem::filesystem_error("Empty file name!", std::make_error_code(std::errc::invalid_argument));
+            }

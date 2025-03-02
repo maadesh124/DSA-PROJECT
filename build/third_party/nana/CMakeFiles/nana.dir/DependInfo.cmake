@@ -1,0 +1,98 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/samsung/DSA PROJECT/third_party/nana/source/any.cpp" "third_party/nana/CMakeFiles/nana.dir/source/any.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/any.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/basic_types.cpp" "third_party/nana/CMakeFiles/nana.dir/source/basic_types.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/basic_types.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/charset.cpp" "third_party/nana/CMakeFiles/nana.dir/source/charset.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/charset.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/datetime.cpp" "third_party/nana/CMakeFiles/nana.dir/source/datetime.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/datetime.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/deploy.cpp" "third_party/nana/CMakeFiles/nana.dir/source/deploy.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/deploy.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/detail/platform_abstraction.cpp" "third_party/nana/CMakeFiles/nana.dir/source/detail/platform_abstraction.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/detail/platform_abstraction.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/detail/platform_spec_posix.cpp" "third_party/nana/CMakeFiles/nana.dir/source/detail/platform_spec_posix.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/detail/platform_spec_posix.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/detail/platform_spec_windows.cpp" "third_party/nana/CMakeFiles/nana.dir/source/detail/platform_spec_windows.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/detail/platform_spec_windows.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/detail/posix/theme.cpp" "third_party/nana/CMakeFiles/nana.dir/source/detail/posix/theme.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/detail/posix/theme.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/filesystem/filesystem.cpp" "third_party/nana/CMakeFiles/nana.dir/source/filesystem/filesystem.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/filesystem/filesystem.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/animation.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/animation.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/animation.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/basis.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/basis.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/basis.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/basic_window.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/basic_window.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/basic_window.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/bedrock_pi.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/bedrock_pi.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/bedrock_pi.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/bedrock_posix.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/bedrock_posix.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/bedrock_posix.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/bedrock_windows.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/bedrock_windows.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/bedrock_windows.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/color_schemes.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/color_schemes.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/color_schemes.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/drawer.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/drawer.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/drawer.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/element_store.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/element_store.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/element_store.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/events_operation.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/events_operation.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/events_operation.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/native_window_interface.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/native_window_interface.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/native_window_interface.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/window_layout.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/window_layout.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/window_layout.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/detail/window_manager.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/window_manager.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/detail/window_manager.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/dragdrop.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/dragdrop.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/dragdrop.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/dragger.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/dragger.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/dragger.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/drawing.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/drawing.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/drawing.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/effects.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/effects.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/effects.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/element.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/element.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/element.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/filebox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/filebox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/filebox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/layout_utility.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/layout_utility.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/layout_utility.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/msgbox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/msgbox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/msgbox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/notifier.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/notifier.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/notifier.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/place.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/place.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/place.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/programming_interface.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/programming_interface.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/programming_interface.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/screen.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/screen.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/screen.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/state_cursor.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/state_cursor.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/state_cursor.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/timer.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/timer.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/timer.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/tooltip.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/tooltip.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/tooltip.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/button.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/button.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/button.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/categorize.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/categorize.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/categorize.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/checkbox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/checkbox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/checkbox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/combox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/combox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/combox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/date_chooser.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/date_chooser.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/date_chooser.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/float_listbox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/float_listbox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/float_listbox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/form.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/form.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/form.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/group.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/group.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/group.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/label.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/label.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/label.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/listbox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/listbox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/listbox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/menu.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/menu.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/menu.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/menubar.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/menubar.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/menubar.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/panel.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/panel.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/panel.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/picture.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/picture.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/picture.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/progress.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/progress.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/progress.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/scroll.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/scroll.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/scroll.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/skeletons/content_view.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/skeletons/content_view.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/skeletons/content_view.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/skeletons/text_editor.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/skeletons/text_editor.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/skeletons/text_editor.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/slider.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/slider.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/slider.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/spinbox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/spinbox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/spinbox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/tabbar.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/tabbar.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/tabbar.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/textbox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/textbox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/textbox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/toolbar.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/toolbar.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/toolbar.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/treebox.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/treebox.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/treebox.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/widgets/widget.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/widget.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/widgets/widget.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/gui/wvl.cpp" "third_party/nana/CMakeFiles/nana.dir/source/gui/wvl.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/gui/wvl.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/internationalization.cpp" "third_party/nana/CMakeFiles/nana.dir/source/internationalization.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/internationalization.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/paint/detail/image_process_provider.cpp" "third_party/nana/CMakeFiles/nana.dir/source/paint/detail/image_process_provider.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/paint/detail/image_process_provider.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/paint/detail/native_paint_interface.cpp" "third_party/nana/CMakeFiles/nana.dir/source/paint/detail/native_paint_interface.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/paint/detail/native_paint_interface.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/paint/graphics.cpp" "third_party/nana/CMakeFiles/nana.dir/source/paint/graphics.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/paint/graphics.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/paint/image.cpp" "third_party/nana/CMakeFiles/nana.dir/source/paint/image.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/paint/image.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/paint/image_process_selector.cpp" "third_party/nana/CMakeFiles/nana.dir/source/paint/image_process_selector.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/paint/image_process_selector.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/paint/pixel_buffer.cpp" "third_party/nana/CMakeFiles/nana.dir/source/paint/pixel_buffer.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/paint/pixel_buffer.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/paint/text_renderer.cpp" "third_party/nana/CMakeFiles/nana.dir/source/paint/text_renderer.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/paint/text_renderer.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/stdc++.cpp" "third_party/nana/CMakeFiles/nana.dir/source/stdc++.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/stdc++.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/system/dataexch.cpp" "third_party/nana/CMakeFiles/nana.dir/source/system/dataexch.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/system/dataexch.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/system/platform.cpp" "third_party/nana/CMakeFiles/nana.dir/source/system/platform.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/system/platform.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/system/shared_wrapper.cpp" "third_party/nana/CMakeFiles/nana.dir/source/system/shared_wrapper.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/system/shared_wrapper.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/system/split_string.cpp" "third_party/nana/CMakeFiles/nana.dir/source/system/split_string.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/system/split_string.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/system/timepiece.cpp" "third_party/nana/CMakeFiles/nana.dir/source/system/timepiece.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/system/timepiece.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/threads/pool.cpp" "third_party/nana/CMakeFiles/nana.dir/source/threads/pool.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/threads/pool.cpp.o.d"
+  "/home/samsung/DSA PROJECT/third_party/nana/source/unicode_bidi.cpp" "third_party/nana/CMakeFiles/nana.dir/source/unicode_bidi.cpp.o" "gcc" "third_party/nana/CMakeFiles/nana.dir/source/unicode_bidi.cpp.o.d"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")
