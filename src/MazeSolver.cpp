@@ -117,6 +117,7 @@ void mergeSort(int arr[], int left, int right) {
 
 
 static int lowerBound(int arr[], int size, int num) {
+   
     int left = 0, right = size - 1;
     int result = -1; 
 

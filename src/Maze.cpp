@@ -17,7 +17,7 @@ int* dst;
 int** board;
 nana::form* fmptr;
 int** path;
-int nSelected;
+int nSelected=0;
 const int ds[4][2]={{0,-1},{-1,0},{0,1},{1,0}};
 bool started=false;
 string* sols;
@@ -190,8 +190,6 @@ void validateQuestion(int blocks){
     pathLengths=s.solve(board,rows,cols);
     sols=s.paths;
     nSols=s.nSols;
-    cout<<"n="<<nSols<<endl;
-    cout<<sols[0]<<endl;
     while(nSols<=0){
         blocks=2*blocks/3;
         generateQuestion(blocks);
@@ -220,11 +218,18 @@ void initialize(int blocks){
 }
 
 void evaluateRes(){
-    //  cout<<"Your score is :"<<s.evaluate(nSelected)<<endl;
-    int pos=nSols-MazeSolver::lowerBound(pathLengths,nSols,nSelected);
-     //cout<<nSelected<<endl;
+    
+    int pos=nSols-MazeSolver::lowerBound(pathLengths,nSols,nSelected-1);
+    string ans="null";
+
+    for(int i=0;i<nSols;i++)
+    {
+        if(pathLengths[0]==sols[i].length())
+        ans=sols[i];
+    }
+    
      cout<<"Your score is :"<<pos*100/nSols<<endl;
-     cout<<"Optimal Solution is "<<sols[0]<<endl;
+     cout<<"Optimal Solution is "<<ans<<endl;
 }
     
 };
