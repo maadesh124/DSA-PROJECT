@@ -41,7 +41,7 @@ Maze(int rows,int cols,int src[2],int dst[2]){
 
         
     srand(time(0));
-    int n1=rand()%(rows*cols/2);
+    int n1=(rows*cols/4);
     initialize(n1);
     
 }
