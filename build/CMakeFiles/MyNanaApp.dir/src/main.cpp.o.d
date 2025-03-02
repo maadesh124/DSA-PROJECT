@@ -239,4 +239,5 @@ CMakeFiles/MyNanaApp.dir/src/main.cpp.o: \
  /home/samsung/DSA\ PROJECT/third_party/nana/include/nana/gui/../traits.hpp \
  /home/samsung/DSA\ PROJECT/third_party/nana/include/nana/gui/msgbox.hpp \
  /home/samsung/DSA\ PROJECT/third_party/nana/include/nana/gui/place.hpp \
- /home/samsung/DSA\ PROJECT/src/Maze.cpp /usr/include/c++/11/iostream
+ /home/samsung/DSA\ PROJECT/src/Maze.cpp /usr/include/c++/11/iostream \
+ /home/samsung/DSA\ PROJECT/src/MazeSolver.cpp
