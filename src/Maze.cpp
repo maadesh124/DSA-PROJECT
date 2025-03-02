@@ -22,6 +22,7 @@ const int ds[4][2]={{0,-1},{-1,0},{0,1},{1,0}};
 bool started=false;
 string* sols;
 int nSols=0;
+int* pathLengths;
 
 Maze(int rows,int cols,int src[2],int dst[2]){
 
@@ -159,8 +160,9 @@ bool on_form_click(const nana::arg_click& arg) {
             
             if(cell_row==dst[0] && cell_col==dst[1])
             {
-                cout<<"Success"<<endl;
-                exit(0);
+                evaluateRes();
+                // cout<<"Success"<<endl;
+                // exit(0);
             }
             break;
         }
@@ -185,32 +187,22 @@ void generateQuestion(int blocks){
 
 void validateQuestion(int blocks){
     MazeSolver s;
-    s.solve(board,rows,cols);
+    pathLengths=s.solve(board,rows,cols);
     sols=s.paths;
     nSols=s.nSols;
     cout<<"n="<<nSols<<endl;
     cout<<sols[0]<<endl;
-    // while(nSols<=0){
-    //     blocks=2*blocks/3;
-    //     generateQuestion(blocks);
-    //     s.solve(board,rows,cols);
-    //     sols=s.paths;
-    //     nSols=s.nSols;
-    // }
+    while(nSols<=0){
+        blocks=2*blocks/3;
+        generateQuestion(blocks);
+        pathLengths= s.solve(board,rows,cols);
+        sols=s.paths;
+        nSols=s.nSols;
+    }
 }
 
 void initialize(int blocks){
 
-    // for(int i=0;i<rows;i++)
-    // for(int j=0;j<cols;j++)
-    // board[i][j]=1;
-
-    // srand(time(0));
-    // for(int x=0;x<blocks;x++){
-    //     int i=rand()%rows;
-    //     int j=rand()%cols;
-    //     board[i][j]=0;
-    // }
     generateQuestion(blocks);
     validateQuestion(blocks);
    
@@ -225,6 +217,14 @@ void initialize(int blocks){
     
     startGame(src,dst);
     ::nana::exec();
+}
+
+void evaluateRes(){
+    //  cout<<"Your score is :"<<s.evaluate(nSelected)<<endl;
+    int pos=nSols-MazeSolver::lowerBound(pathLengths,nSols,nSelected);
+     //cout<<nSelected<<endl;
+     cout<<"Your score is :"<<pos*100/nSols<<endl;
+     cout<<"Optimal Solution is "<<sols[0]<<endl;
 }
     
 };
