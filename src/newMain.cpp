@@ -26,15 +26,23 @@ int main() {
     board=generator.getBoard();
     MazeSolver solver(board,rows,cols);
     
-    
-    string shortestPath=solver.solveByBFS();
-    
+    cout<<"How do you want to compute shortest path\n0:Backtracking\t1:Dijkstra\t2:BFS"<<endl;
+    int opt;
+    cin>>opt;
+
+    string shortestPath;
+    if(opt==0)
+    shortestPath=solver.solveByBacktracking();
+    else if(opt==1)
+    shortestPath=solver.solveByDijkstra();
+    else
+    shortestPath=solver.solveByBFS();
+
 
     MazeViewer viewer(board, rows, cols,shortestPath,&finish);
-    viewer.startTracking();
-    
+    viewer.startTracking();    
     nana::exec();
-   
+    
     
     
     
