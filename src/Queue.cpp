@@ -26,7 +26,7 @@ public:
 
     ~Queue() {
         while (!isEmpty()) {
-            dequeue();
+            deque();
         }
     }
 

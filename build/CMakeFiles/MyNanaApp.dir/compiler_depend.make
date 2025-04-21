@@ -294,10 +294,16 @@ CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o: ../src/newMain.cpp \
   ../third_party/nana/include/nana/gui/place.hpp \
   ../src/MazeGenerator.cpp \
   /usr/include/c++/11/iostream \
+  ../src/MazeSolver.cpp \
+  ../src/Queue.cpp \
   ../src/MazeViewer.cpp
 
 
 ../src/MazeViewer.cpp:
+
+../src/Queue.cpp:
+
+../src/MazeSolver.cpp:
 
 ../src/MazeGenerator.cpp:
 

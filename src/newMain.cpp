@@ -1,37 +1,27 @@
 #include <nana/gui.hpp>
 #include "MazeGenerator.cpp"
+#include "MazeSolver.cpp"
 #include "MazeViewer.cpp" // Assuming your MazeViewer class is here
 
+
+using namespace std;
 int main() {
-    // // Sample maze setup
+
      int rows = 5, cols = 5;
-    // int** board = new int*[rows];
-    // for (int i = 0; i < rows; ++i) {
-    //     board[i] = new int[cols];
-    //     for (int j = 0; j < cols; ++j) {
-    //         board[i][j] = 1; // 1 = empty, 0 = wall
-    //     }
-    // }
-
-    // // Add walls as needed
-    // board[1][1] = 0;
-    // board[2][2] = 0;
-
-    // int src[] = {0, 0};  // Start
-    // int dst[] = {4, 4};  // End
+     int** board;
 
     MazeGenerator generator(rows,cols);
-    MazeViewer viewer(generator.getBoard(), rows, cols);
+    board=generator.getBoard();
+    MazeSolver solver(board,rows,cols);
+    string ans=solver.solveByBFS();
+    cout << "Shortest Path : " << ans << "\n";
+
+    MazeViewer viewer(board, rows, cols);
     viewer.startTracking();
-
-    nana::exec(); // This blocks until the GUI window is closed
-
-    std::string moves = viewer.getPath(); // <-- Reached after window closes
+    
+    nana::exec(); 
+    string moves = viewer.getPath(); 
     std::cout << "Path taken: " << moves << "\n";
-
-    // Cleanup
-    // for (int i = 0; i < rows; ++i) delete[] board[i];
-    // delete[] board;
-
+    
     return 0;
 }

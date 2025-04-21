@@ -7,151 +7,37 @@ using namespace std;
 
 class MazeSolver {
 public:
-    string* paths;  
-    int nSols; 
     int** board;
     int rows,cols;  
-    bool** visited; 
-    int pos;
-
+    int** predecessor;
+    bool** visited;
     int dx[4] = {0, 1, 0, -1};
     int dy[4] = {1, 0, -1, 0};
 
     MazeSolver(int** board,int rows ,int cols)
     {
-        nSols = 0;
-        visited = new bool*[rows];
-        for (int i = 0; i < rows; ++i) {
-            visited[i] = new bool[cols]();
-        }
-        paths = new string[1000];  
 
         this->board=board;
         this->rows=rows;
         this->cols=cols;
-    }
+        predecessor = new int*[rows];
+        visited = new bool*[rows];
 
-    bool isSafe(int x, int y) {
-
-        return (x >= 0 && y >= 0 && x < rows && y < cols && board[x][y] == 1 && !visited[x][y]);
-    }
-
-    void findPaths(int x, int y, string path) {
-        
-        if (x == rows - 1 && y == cols - 1) {
-            paths[nSols++] = path;  
-            return;
-        }
-        visited[x][y] = true;
-
-        for (int i = 0; i < 4; ++i) {
-            int newX = x + dx[i];
-            int newY = y + dy[i];
-
-            if (isSafe(newX, newY)) {
-                
-                char direction = (i == 0) ? 'R' : (i == 1) ? 'D' : (i == 2) ? 'L' : 'U';
-                findPaths(newX, newY,  path + direction);
+        for (int i = 0; i < rows; ++i) {
+            predecessor[i] = new int[cols];
+            visited[i] = new bool[cols];
+            for (int j = 0; j < cols; ++j) {
+                predecessor[i][j] = -1;
+                visited[i][j]=false;
             }
         }
 
-        visited[x][y] = false;
-    }
-
-
-    int* solve() {
         
-
-        if (board[0][0] == 1) {
-            findPaths(0, 0,"");
-        }
-
-        int* pathLengths;  
-        pathLengths=new int[nSols];
-        for(int i=0;i<nSols;i++)
-        pathLengths[i]=paths[i].length();
-
-        mergeSort(pathLengths,0,nSols-1);
-
-        return pathLengths;
-
     }
 
-void merge(int arr[], int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
 
-    int leftArr[n1], rightArr[n2];
-
-
-    for (int i = 0; i < n1; i++)
-        leftArr[i] = arr[left + i];
-    for (int i = 0; i < n2; i++)
-        rightArr[i] = arr[mid + 1 + i];
-
-    int i = 0, j = 0, k = left;
-    while (i < n1 && j < n2) {
-        if (leftArr[i] <= rightArr[j]) {
-            arr[k] = leftArr[i];
-            i++;
-        } else {
-            arr[k] = rightArr[j];
-            j++;
-        }
-        k++;
-    }
-    while (i < n1) {
-        arr[k] = leftArr[i];
-        i++;
-        k++;
-    }
-    while (j < n2) {
-        arr[k] = rightArr[j];
-        j++;
-        k++;
-    }
-}
-
-void mergeSort(int arr[], int left, int right) {
-    if (left < right) {
-        int mid = left + (right - left) / 2;
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-        merge(arr, left, mid, right);
-    }
-}
-
-
-static int lowerBound(int arr[], int size, int num) {
-   
-    int left = 0, right = size - 1;
-    int result = -1; 
-
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-
-        if (arr[mid] >= num) {
-            result = mid; 
-            right = mid - 1;
-        } else {
-            left = mid + 1;
-        }
-    }
-
-    return result;
-}
-
-int** solveByBFS() {
+string solveByBFS() {
     
-    int** predecessor = new int*[rows];
-
-    for (int i = 0; i < rows; ++i) {
-        predecessor[i] = new int[cols];
-        for (int j = 0; j < cols; ++j) {
-            predecessor[i][j] = -1;
-        }
-    }
-
     Queue q;  
     if (board[0][0] == 1) {
         q.enqueue(0);
@@ -184,7 +70,7 @@ int** solveByBFS() {
         }
     }
 
-    return predecessor;
+    return getPath(rows*cols -1);
 }
 
 int toLinearIndex(int row, int col) {
@@ -201,4 +87,27 @@ bool isValid(int r,int c)
 {
     return (r<rows && c<cols && r>=0 && c>=0);
 }
+
+char getDirection(int index1, int index2) {
+    int r1 = index1 / cols, c1 = index1 % cols;
+    int r2 = index2 / cols, c2 = index2 % cols;
+
+    if (r1 == r2 && c1 + 1 == c2) return 'R';
+    if (r1 == r2 && c1 - 1 == c2) return 'L';
+    if (c1 == c2 && r1 + 1 == r2) return 'D';
+    if (c1 == c2 && r1 - 1 == r2) return 'U';
+
+    return '?';  // Not adjacent or invalid relation
+}
+
+string getPath(int index)
+{
+    if(index==0)
+    return "";
+    int parent = predecessor[index / cols][index % cols];
+    return getPath(parent) + getDirection(parent, index);
+}
+
+
+
 };

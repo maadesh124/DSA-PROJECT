@@ -295,5 +295,7 @@ CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o
  /home/samsung/DSA PROJECT/third_party/nana/include/nana/gui/place.hpp
  /home/samsung/DSA PROJECT/src/MazeGenerator.cpp
  /usr/include/c++/11/iostream
+ /home/samsung/DSA PROJECT/src/MazeSolver.cpp
+ /home/samsung/DSA PROJECT/src/Queue.cpp
  /home/samsung/DSA PROJECT/src/MazeViewer.cpp
 
