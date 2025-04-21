@@ -12,6 +12,7 @@ public:
     int rows,cols;  
     int** predecessor;
     bool** visited;
+   
     string finalAns = "";  //for backtracking solution
     int dx[4] = {0, 1, 0, -1};
     int dy[4] = {1, 0, -1, 0};

@@ -2,6 +2,7 @@
 #include <nana/paint/graphics.hpp>
 #include <string>
 #include <iostream>
+#include <functional> 
 
 class MazeViewer {
 public:
@@ -14,15 +15,19 @@ public:
     int* src;
     int* dst;
     int currRow, currCol;
+    string shortestPath;
+    void (*finish)(std::string, std::string); 
 
-    MazeViewer(int** board, int rows, int cols)
+
+    MazeViewer(int** board, int rows, int cols,string ans,void (*callback)(std::string, std::string))
         : board(board), rows(rows), cols(cols), src(src), dst(dst)
     {
         src=new int[2];
         dst=new int[2];
         src[0]=0;src[1]=0;
         dst[0]=rows-1;dst[1]=cols-1;
-
+        this->shortestPath=ans;
+        finish=callback;
 
         using namespace nana;
         appearance ap;
@@ -131,7 +136,7 @@ public:
             board[row][col] = 2;
             update();
             if (row == dst[0] && col == dst[1]) {
-            fmptr->close(); 
+            finish(shortestPath,path);
         }
             return true;
         }

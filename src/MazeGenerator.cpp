@@ -72,7 +72,7 @@ private:
 
         
         carvePath(0, 0);
-        int numRandomOpens = rand() % ((rows * cols) / 2);  
+        int numRandomOpens = rand() % ((rows * cols) / 4);  
 
         for (int i = 0; i < numRandomOpens; ++i) {
             int rIdx = rand() % rows;
