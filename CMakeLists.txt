@@ -12,7 +12,7 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/third_party/nana)
 
 # Add your source files here
 set(SOURCES
-    src/main.cpp
+    src/check.cpp
     # Add other source files here
 )
 
