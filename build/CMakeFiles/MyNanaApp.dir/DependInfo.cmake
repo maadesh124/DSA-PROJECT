@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/samsung/DSA PROJECT/src/check.cpp" "CMakeFiles/MyNanaApp.dir/src/check.cpp.o" "gcc" "CMakeFiles/MyNanaApp.dir/src/check.cpp.o.d"
+  "/home/samsung/DSA PROJECT/src/newMain.cpp" "CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o" "gcc" "CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o.d"
   )
 
 # Targets to which this target links.

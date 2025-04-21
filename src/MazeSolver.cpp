@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include "Queue.cpp"
+
 
 using namespace std;
 
@@ -14,6 +16,20 @@ public:
 
     int dx[4] = {0, 1, 0, -1};
     int dy[4] = {1, 0, -1, 0};
+
+    MazeSolver(int** board,int rows ,int cols)
+    {
+        nSols = 0;
+        visited = new bool*[rows];
+        for (int i = 0; i < rows; ++i) {
+            visited[i] = new bool[cols]();
+        }
+        paths = new string[1000];  
+
+        this->board=board;
+        this->rows=rows;
+        this->cols=cols;
+    }
 
     bool isSafe(int x, int y) {
 
@@ -43,24 +59,14 @@ public:
     }
 
 
-    int* solve(int** board, int rows, int cols) {
-        nSols = 0;
-        visited = new bool*[rows];
-        for (int i = 0; i < rows; ++i) {
-            visited[i] = new bool[cols]();
-        }
-        paths = new string[1000];  
-
-        this->board=board;
-        this->rows=rows;
-        this->cols=cols;
+    int* solve() {
+        
 
         if (board[0][0] == 1) {
             findPaths(0, 0,"");
-
         }
 
-       int* pathLengths;  
+        int* pathLengths;  
         pathLengths=new int[nSols];
         for(int i=0;i<nSols;i++)
         pathLengths[i]=paths[i].length();
@@ -135,9 +141,64 @@ static int lowerBound(int arr[], int size, int num) {
     return result;
 }
 
-// int evaluate(int l){
-//     pos=nSols-lowerBound(pathLengths,nSols,l);
-//     return pos*100/nSols;
-// }
+int** solveByBFS() {
+    
+    int** predecessor = new int*[rows];
 
+    for (int i = 0; i < rows; ++i) {
+        predecessor[i] = new int[cols];
+        for (int j = 0; j < cols; ++j) {
+            predecessor[i][j] = -1;
+        }
+    }
+
+    Queue q;  
+    if (board[0][0] == 1) {
+        q.enqueue(0);
+    }
+
+    int dx[4] = {0, 1, 0, -1};
+    int dy[4] = {1, 0, -1, 0};
+
+    while (!q.isEmpty()) {
+        
+        int size=q.size();
+
+        for(int x=0;x<size;x++)
+        {
+            int parent=q.peek();
+            q.deque();
+            int px,py;
+            to2DIndex(parent,px,py);
+            
+            for(int i=0;i<4;i++)
+            {
+                int x=px+dx[i],y=py+dy[i];
+                if(isValid(x,y) && predecessor[x][y]==-1 && board[x][y]==1)
+                {
+                    predecessor[x][y]=parent;
+                    q.enqueue(toLinearIndex(x,y));
+                }
+                
+            }
+        }
+    }
+
+    return predecessor;
+}
+
+int toLinearIndex(int row, int col) {
+    return row * cols + col;
+}
+
+void to2DIndex(int index, int &row, int &col) {
+    row = index / cols;
+    col = index % cols;
+}
+
+
+bool isValid(int r,int c)
+{
+    return (r<rows && c<cols && r>=0 && c>=0);
+}
 };

@@ -186,14 +186,15 @@ void generateQuestion(int blocks){
 }
 
 void validateQuestion(int blocks){
-    MazeSolver s;
-    pathLengths=s.solve(board,rows,cols);
+    
+    MazeSolver s();
+    pathLengths=s.solve();
     sols=s.paths;
     nSols=s.nSols;
     while(nSols<=0){
         blocks=2*blocks/3;
         generateQuestion(blocks);
-        pathLengths= s.solve(board,rows,cols);
+        pathLengths= s.solve();
         sols=s.paths;
         nSols=s.nSols;
     }
