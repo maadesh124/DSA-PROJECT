@@ -7,20 +7,22 @@
 using namespace std;
 int main() {
 
-     int rows = 5, cols = 5;
+     int rows, cols;
      int** board;
-
+    cout<<"Enter maze dimension"<<endl;
+    cin>>rows;
+    cin>>cols;
     MazeGenerator generator(rows,cols);
     board=generator.getBoard();
     MazeSolver solver(board,rows,cols);
-    string ans=solver.solveByDijkstra();
+    string shortestPath=solver.solveByBacktracking();
     cout << "Shortest Path : " << ans << "\n";
 
     MazeViewer viewer(board, rows, cols);
     viewer.startTracking();
     
     nana::exec(); 
-    string moves = viewer.getPath(); 
+    string path = viewer.getPath(); 
     std::cout << "Path taken: " << moves << "\n";
     
     return 0;

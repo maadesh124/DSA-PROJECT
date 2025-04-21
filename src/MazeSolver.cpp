@@ -12,6 +12,7 @@ public:
     int rows,cols;  
     int** predecessor;
     bool** visited;
+    string finalAns = "";  //for backtracking solution
     int dx[4] = {0, 1, 0, -1};
     int dy[4] = {1, 0, -1, 0};
 
@@ -35,6 +36,36 @@ public:
 
         
     }
+
+void dfsBacktrack(int index, string path) {
+    int x, y;
+    to2DIndex(index, x, y);
+    if (x == rows - 1 && y == cols - 1) {
+        if (finalAns == "" || path.length() < finalAns.length()) {
+            finalAns = path;
+        }
+        return;
+    }
+
+    visited[x][y] = true;
+
+    for (int i = 0; i < 4; ++i) {
+        int nx = x + dx[i], ny = y + dy[i];
+        if (isValid(nx, ny) && board[nx][ny] == 1 && !visited[nx][ny]) {
+            int nextIndex = toLinearIndex(nx, ny);
+            char dir = getDirection(index, nextIndex);
+            dfsBacktrack(nextIndex, path + dir);
+        }
+    }
+
+    visited[x][y] = false; // backtrack
+}
+
+string solveByBacktracking() {
+    finalAns = "";
+    dfsBacktrack(0, ""); // start from index 0 with empty path
+    return finalAns;
+}
 
        
 
