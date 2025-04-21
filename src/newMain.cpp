@@ -13,7 +13,7 @@ int main() {
     MazeGenerator generator(rows,cols);
     board=generator.getBoard();
     MazeSolver solver(board,rows,cols);
-    string ans=solver.solveByBFS();
+    string ans=solver.solveByDijkstra();
     cout << "Shortest Path : " << ans << "\n";
 
     MazeViewer viewer(board, rows, cols);

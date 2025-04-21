@@ -69,28 +69,28 @@ include CMakeFiles/MyNanaApp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MyNanaApp.dir/flags.make
 
-CMakeFiles/MyNanaApp.dir/src/check.cpp.o: CMakeFiles/MyNanaApp.dir/flags.make
-CMakeFiles/MyNanaApp.dir/src/check.cpp.o: ../src/check.cpp
-CMakeFiles/MyNanaApp.dir/src/check.cpp.o: CMakeFiles/MyNanaApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/samsung/DSA PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyNanaApp.dir/src/check.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyNanaApp.dir/src/check.cpp.o -MF CMakeFiles/MyNanaApp.dir/src/check.cpp.o.d -o CMakeFiles/MyNanaApp.dir/src/check.cpp.o -c "/home/samsung/DSA PROJECT/src/check.cpp"
+CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o: CMakeFiles/MyNanaApp.dir/flags.make
+CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o: ../src/newMain.cpp
+CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o: CMakeFiles/MyNanaApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/samsung/DSA PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o -MF CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o.d -o CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o -c "/home/samsung/DSA PROJECT/src/newMain.cpp"
 
-CMakeFiles/MyNanaApp.dir/src/check.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyNanaApp.dir/src/check.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/samsung/DSA PROJECT/src/check.cpp" > CMakeFiles/MyNanaApp.dir/src/check.cpp.i
+CMakeFiles/MyNanaApp.dir/src/newMain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyNanaApp.dir/src/newMain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/samsung/DSA PROJECT/src/newMain.cpp" > CMakeFiles/MyNanaApp.dir/src/newMain.cpp.i
 
-CMakeFiles/MyNanaApp.dir/src/check.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyNanaApp.dir/src/check.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/samsung/DSA PROJECT/src/check.cpp" -o CMakeFiles/MyNanaApp.dir/src/check.cpp.s
+CMakeFiles/MyNanaApp.dir/src/newMain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyNanaApp.dir/src/newMain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/samsung/DSA PROJECT/src/newMain.cpp" -o CMakeFiles/MyNanaApp.dir/src/newMain.cpp.s
 
 # Object files for target MyNanaApp
 MyNanaApp_OBJECTS = \
-"CMakeFiles/MyNanaApp.dir/src/check.cpp.o"
+"CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o"
 
 # External object files for target MyNanaApp
 MyNanaApp_EXTERNAL_OBJECTS =
 
-MyNanaApp: CMakeFiles/MyNanaApp.dir/src/check.cpp.o
+MyNanaApp: CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o
 MyNanaApp: CMakeFiles/MyNanaApp.dir/build.make
 MyNanaApp: third_party/nana/libnana.a
 MyNanaApp: /usr/lib/x86_64-linux-gnu/libSM.so

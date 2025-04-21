@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MyNanaApp.dir/src/check.cpp.o"
-  "CMakeFiles/MyNanaApp.dir/src/check.cpp.o.d"
+  "CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o"
+  "CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o.d"
   "MyNanaApp"
   "MyNanaApp.pdb"
 )

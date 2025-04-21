@@ -243,4 +243,5 @@ CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o: \
  /usr/include/c++/11/iostream \
  /home/samsung/DSA\ PROJECT/src/MazeSolver.cpp \
  /home/samsung/DSA\ PROJECT/src/Queue.cpp \
+ /home/samsung/DSA\ PROJECT/src/PriorityQueue.cpp \
  /home/samsung/DSA\ PROJECT/src/MazeViewer.cpp

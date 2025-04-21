@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include "Queue.cpp"
-
+#include "PriorityQueue.cpp" // Assumes MinPriorityQueue is defined
+#define INT_MAX 1e10
 
 using namespace std;
 
@@ -34,6 +35,60 @@ public:
 
         
     }
+
+       
+
+string solveByDijkstra() {
+    MinPriorityQueue pq;
+
+    
+    int** dist = new int*[rows];
+    for (int i = 0; i < rows; ++i) {
+        dist[i] = new int[cols];
+        for (int j = 0; j < cols; ++j) {
+            dist[i][j] = INT_MAX;
+        }
+    }
+
+    if (board[0][0] == 1) {
+        dist[0][0] = 0;
+        pq.enqueue(0, 0);  // index, distance
+    }
+
+    int dx[4] = {0, 1, 0, -1};
+    int dy[4] = {1, 0, -1, 0};
+
+    while (!pq.isEmpty()) {
+        int current = pq.dequeue();  // returns index with min distance
+        int cx, cy;
+        to2DIndex(current, cx, cy);
+
+        for (int i = 0; i < 4; ++i) {
+            int nx = cx + dx[i];
+            int ny = cy + dy[i];
+
+            if (isValid(nx, ny) && board[nx][ny] == 1) {
+                int newDist = dist[cx][cy] + 1;
+                if (newDist < dist[nx][ny]) {
+                    dist[nx][ny] = newDist;
+                    predecessor[nx][ny] = toLinearIndex(cx, cy);
+                    pq.enqueue(toLinearIndex(nx, ny), newDist);
+                }
+            }
+        }
+    }
+
+    string path = getPath(toLinearIndex(rows - 1, cols - 1));
+
+    // Clean up allocated memory
+    for (int i = 0; i < rows; ++i) {
+        delete[] dist[i];
+    }
+    delete[] dist;
+
+    return path;
+}
+
 
 
 string solveByBFS() {
