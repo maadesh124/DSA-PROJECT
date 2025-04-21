@@ -142,29 +142,29 @@ nana/fast:
 	$(MAKE) $(MAKESILENT) -f third_party/nana/CMakeFiles/nana.dir/build.make third_party/nana/CMakeFiles/nana.dir/build
 .PHONY : nana/fast
 
-src/newMain.o: src/newMain.cpp.o
-.PHONY : src/newMain.o
+src/check.o: src/check.cpp.o
+.PHONY : src/check.o
 
 # target to build an object file
-src/newMain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyNanaApp.dir/build.make CMakeFiles/MyNanaApp.dir/src/newMain.cpp.o
-.PHONY : src/newMain.cpp.o
+src/check.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyNanaApp.dir/build.make CMakeFiles/MyNanaApp.dir/src/check.cpp.o
+.PHONY : src/check.cpp.o
 
-src/newMain.i: src/newMain.cpp.i
-.PHONY : src/newMain.i
+src/check.i: src/check.cpp.i
+.PHONY : src/check.i
 
 # target to preprocess a source file
-src/newMain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyNanaApp.dir/build.make CMakeFiles/MyNanaApp.dir/src/newMain.cpp.i
-.PHONY : src/newMain.cpp.i
+src/check.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyNanaApp.dir/build.make CMakeFiles/MyNanaApp.dir/src/check.cpp.i
+.PHONY : src/check.cpp.i
 
-src/newMain.s: src/newMain.cpp.s
-.PHONY : src/newMain.s
+src/check.s: src/check.cpp.s
+.PHONY : src/check.s
 
 # target to generate assembly for a file
-src/newMain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyNanaApp.dir/build.make CMakeFiles/MyNanaApp.dir/src/newMain.cpp.s
-.PHONY : src/newMain.cpp.s
+src/check.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyNanaApp.dir/build.make CMakeFiles/MyNanaApp.dir/src/check.cpp.s
+.PHONY : src/check.cpp.s
 
 # Help Target
 help:
@@ -176,9 +176,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MyNanaApp"
 	@echo "... nana"
-	@echo "... src/newMain.o"
-	@echo "... src/newMain.i"
-	@echo "... src/newMain.s"
+	@echo "... src/check.o"
+	@echo "... src/check.i"
+	@echo "... src/check.s"
 .PHONY : help
 
 

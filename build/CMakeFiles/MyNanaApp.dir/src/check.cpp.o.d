@@ -1,6 +1,7 @@
 CMakeFiles/MyNanaApp.dir/src/check.cpp.o: \
  /home/samsung/DSA\ PROJECT/src/check.cpp /usr/include/stdc-predef.h \
- /home/samsung/DSA\ PROJECT/src/Queue.cpp /usr/include/c++/11/iostream \
+ /home/samsung/DSA\ PROJECT/src/PriorityQueue.cpp \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -145,5 +146,4 @@ CMakeFiles/MyNanaApp.dir/src/check.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
- /home/samsung/DSA\ PROJECT/src/PriorityQueue.cpp
+ /usr/include/c++/11/bits/istream.tcc

@@ -1,79 +1,67 @@
 #include <iostream>
-using namespace std;
 
-class PriorityQueueNode {
-public:
-    int data;
+using namespace std;
+struct PriorityQueueNode {
+    int index;
+    int dist;
     PriorityQueueNode* next;
 
-    PriorityQueueNode(int value) {
-        data = value;
-        next = nullptr;
-    }
+    PriorityQueueNode(int i, int d) : index(i), dist(d), next(nullptr) {}
 };
 
-class PriorityQueue {
+class MinPriorityQueue {
 private:
     PriorityQueueNode* head;
 
 public:
-    PriorityQueue() {
-        head = nullptr;
-    }
+    MinPriorityQueue() : head(nullptr) {}
 
-    ~PriorityQueue() {
-        while (!isEmpty()) {
-            dequeue();
-        }
-    }
-
-    // Enqueue with priority (min-priority: smallest number is highest priority)
-    void enqueue(int value) {
-        PriorityQueueNode* newNode = new PriorityQueueNode(value);
-
-        // Insert at the beginning if queue is empty or value is smaller than head
-        if (head == nullptr || value < head->data) {
-            newNode->next = head;
-            head = newNode;
-        } else {
-            PriorityQueueNode* current = head;
-            while (current->next != nullptr && current->next->data <= value) {
-                current = current->next;
-            }
-            newNode->next = current->next;
-            current->next = newNode;
-        }
-    }
-
-    // Remove element with highest priority (smallest value)
-    void dequeue() {
-        if (isEmpty()) {
-            cout << "Priority Queue is empty.\n";
-            return;
-        }
-        PriorityQueueNode* temp = head;
-        head = head->next;
-        delete temp;
-    }
-
-    int peek() const {
-        if (isEmpty()) {
-            cerr << "Priority Queue is empty.\n";
-            return -1;
-        }
-        return head->data;
-    }
-
-    bool isEmpty() const {
+    bool isEmpty() {
         return head == nullptr;
     }
 
-    void display() const {
-        PriorityQueueNode* temp = head;
-        while (temp != nullptr) {
-            cout << temp->data << " -> ";
-            temp = temp->next;
+    void enqueue(int index, int dist) {
+        PriorityQueueNode* newNode = new PriorityQueueNode(index, dist);
+
+        // Insert at head if empty or smaller than current head
+        if (!head || dist < head->dist) {
+            newNode->next = head;
+            head = newNode;
+            return;
         }
-        cout << "NULL\n";
+
+        // Find correct position to insert
+        PriorityQueueNode* curr = head;
+        while (curr->next && curr->next->dist <= dist) {
+            curr = curr->next;
+        }
+
+        newNode->next = curr->next;
+        curr->next = newNode;
+    }
+
+    int dequeue() {
+        if (isEmpty()) return -1;
+
+        int retIndex = head->index;
+        PriorityQueueNode* temp = head;
+        head = head->next;
+        delete temp;
+        return retIndex;
+    }
+
+    void printQueue() {
+        PriorityQueueNode* curr = head;
+        while (curr) {
+            std::cout << "(" << curr->index << "," << curr->dist << ") ";
+            curr = curr->next;
+        }
+        std::cout << "\n";
+    }
+
+    ~MinPriorityQueue() {
+        while (!isEmpty()) {
+            dequeue();
+        }
     }
 };

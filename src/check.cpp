@@ -1,25 +1,25 @@
-#include "Queue.cpp"
 #include "PriorityQueue.cpp"
 
+using namespace std;
 int main() {
-    cout << "---- Queue Test ----\n";
-    Queue q;
-    q.enqueue(1);
-    q.enqueue(2);
-    q.enqueue(3);
-    q.display();  // Output: 1 -> 2 -> 3 -> NULL
-    q.dequeue();
-    q.display();  // Output: 2 -> 3 -> NULL
+    MinPriorityQueue pq;
 
-    cout << "\n---- Priority Queue Test (Min) ----\n";
-    PriorityQueue pq;
-    pq.enqueue(30);
-    pq.enqueue(10);
-    pq.enqueue(20);
-    pq.enqueue(50);
-    pq.display();  // Output: 10 -> 20 -> 30 -> 50 -> NULL
-    pq.dequeue();
-    pq.display();  // Output: 20 -> 30 -> 50 -> NULL
+    // Enqueue some elements
+    pq.enqueue(2, 8);
+    pq.enqueue(5, 3);
+    pq.enqueue(1, 10);
+    pq.enqueue(4, 7);
+    pq.enqueue(0, 2);
+
+    pq.printQueue();  // Expected order by dist: (0,2) (5,3) (4,7) (2,8) (1,10)
+
+    // Dequeue elements one by one
+    cout << "\nDequeuing all elements:\n";
+    while (!pq.isEmpty()) {
+        int minIndex = pq.dequeue();
+        cout << "Dequeued index: " << minIndex << endl;
+        pq.printQueue();
+    }
 
     return 0;
 }
